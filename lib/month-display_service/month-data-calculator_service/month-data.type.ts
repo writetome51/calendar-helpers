@@ -1,4 +1,4 @@
-import { DaysOfMonth } from '@shared/days-of-month.type';
+import { DaysOfMonth } from '../../days-of-month.type';
 
 
 export type MonthData = {

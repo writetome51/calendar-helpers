@@ -1,10 +1,10 @@
-import { DaysOfMonthData as daysOfMonth } from '@shared/days-of-month.data';
+import { DaysOfMonthData as daysOfMonth } from '../days-of-month.data';
 import { MonthDataCalculatorService as monthCalculator }
 	from './month-data-calculator_service/month-data-calculator.service';
-import { MonthNamesData as monthNames } from '@shared/month-names.data';
+import { MonthNamesData as monthNames } from '../month-names.data';
 import { SelectedData as selected } from '../selected.data';
 import { TodaysDateService as todaysDate } from './todays-date.service';
-import { TodayData as today } from '@shared/today.data';
+import { TodayData as today } from '../today.data';
 
 
 export class MonthDisplayService {

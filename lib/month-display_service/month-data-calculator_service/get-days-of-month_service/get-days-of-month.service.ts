@@ -1,4 +1,4 @@
-import { DaysOfMonth } from '@shared/days-of-month.type';
+import { DaysOfMonth } from '../../../days-of-month.type';
 import { getArrFilled } from '@writetome51/get-arr-filled';
 import { WeekdayIndex } from './weekday-index.type';
 import { MonthInfoService as monthInfo } from './month-info_service/month-info.service';
