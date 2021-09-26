@@ -1,20 +1,25 @@
-# 
+# calendar-helpers
 
-Modules essential for creating a calendar app.
+Modules essential for creating a calendar app.  
+They are the following:
 
-## Example
+## DaysOfMonth 
+## DaysOfMonthData
+## MonthDisplayService
+## MonthNamesData 
+## SelectedData 
+## TodayData
 
-
-```ts
-
-```
+------
 
 ## Installation
 ```bash
-npm i  @writetome51/calendar-helpers
+npm i @writetome51/calendar-helpers
 ```
 
 ## Loading
 ```js
-import { } from '@writetome51/calendar-helpers';
+import { DaysOfMonth, DaysOfMonthData, MonthDisplayService, 
+    MonthNamesData, SelectedData, TodayData } 
+    from '@writetome51/calendar-helpers';
 ```
