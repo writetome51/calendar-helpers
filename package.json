@@ -1,0 +1,30 @@
+{
+  "name": "@writetome51/calendar-helpers",
+  "version": "0.0.1",
+  "description": "Modules essential for creating a calendar app",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/writetome51/calendar-helpers.git"
+  },
+  "keywords": [
+    "calendar",
+    "helper",
+    "modules"
+  ],
+  "author": "Steve Thompson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/writetome51/calendar-helpers/issues"
+  },
+  "homepage": "https://github.com/writetome51/calendar-helpers#readme",
+  "devDependencies": {},
+  "dependencies": {
+  
+  }
+}
