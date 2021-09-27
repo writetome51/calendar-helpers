@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/calendar-helpers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Modules essential for creating a calendar app",
   "type": "module",
   "main": "dist/index.js",
