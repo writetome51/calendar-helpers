@@ -1,5 +1,3 @@
 export declare class MonthNamesData {
-
-	static readonly data: string[];
-
+    static readonly data: string[];
 }

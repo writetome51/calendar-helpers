@@ -6,9 +6,10 @@ export declare class MonthDisplayService {
 	static goForwardOrBackOne(plusOrMinusOne: 1 | -1): void;
 
 
-	static updateOnChangeOfSelectedMonthOrYear(): void;
+	static updateDays(
+		{monthIndex, year}: { monthIndex: number; year: number; }
+	): void;
 
 
-	private static __setSelectedDateToTodaysDate;
-
+	private static __setSelectedDate;
 }

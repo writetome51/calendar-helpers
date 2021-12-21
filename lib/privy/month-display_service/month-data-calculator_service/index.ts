@@ -1,5 +1,4 @@
-import { GetDaysOfMonthService as getDaysOfMonth }
-	from './get-days-of-month_service/get-days-of-month.service';
+import { GetDaysOfMonthService as getDaysOfMonth } from './get-days-of-month_service';
 import { GetMonthIncrementedOrDecrementedService as getMonthIncrementedOrDecremented }
 	from './get-month-incremented-or-decremented.service';
 import { MonthData } from './month-data.type';

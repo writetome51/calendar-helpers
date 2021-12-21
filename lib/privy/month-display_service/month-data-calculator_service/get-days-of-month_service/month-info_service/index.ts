@@ -3,11 +3,10 @@ import { GetNumLeapYearsPassedService as getNumLeapYearsPassed }
 	from './get-num-leap-years-passed.service';
 import { getHead } from '@writetome51/array-get-head-tail';
 import { getSum } from '@writetome51/get-sum-average-product';
-import { StartYearData as startYear }
-	from '../../start-year.data';
+import { isLeapYear } from '@writetome51/is-leap-year';
+import { StartYearData as startYear } from '../../start-year.data';
 import { WeekdayIndex } from '../weekday-index.type';
 import { yearValid } from './year-valid.function';
-import { isLeapYear } from '@writetome51/is-leap-year';
 
 
 export class MonthInfoService {
