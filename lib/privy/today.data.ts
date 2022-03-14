@@ -1,13 +1,4 @@
-import { MonthIndex } from './month-display_service/month-data-calculator_service/month-data.type';
-
-
-export const TodayData: {
-	data: {
-		year: number,
-		monthIndex: MonthIndex,
-		day: number
-	}
-} = {
+export const TodayData  = {
 	data: {
 		year: 0,
 		monthIndex: 0,

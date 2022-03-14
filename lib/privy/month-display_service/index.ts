@@ -3,8 +3,7 @@ import { MonthDataCalculatorService as monthCalculator } from './month-data-calc
 import { TodaysDateService as todaysDate } from './todays-date.service';
 import { TodayData as today } from '../today.data';
 import { DaysOfMonth } from '../days-of-month.type';
-import { MonthData, MonthIndex, MonthNumber }
-	from './month-data-calculator_service/month-data.type';
+import { MonthData, MonthNumber } from './month-data-calculator_service/month-data.type';
 
 
 export class MonthDisplayService {
@@ -49,9 +48,7 @@ export class MonthDisplayService {
 	}
 
 
-	static updateDays(
-		{monthIndex, year}: { monthIndex: MonthIndex, year: number }
-	): void {
+	static updateDays({monthIndex, year}): void {
 		const {days} = monthCalculator.getMonthData(monthIndex, year);
 		daysOfMonth.data = days;
 	}
