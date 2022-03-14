@@ -1,12 +1,37 @@
 import { DaysOfMonthData as daysOfMonth } from '../days-of-month.data';
 import { MonthDataCalculatorService as monthCalculator } from './month-data-calculator_service';
-import { MonthNamesData as monthNames } from '../month-names.data';
 import { SelectedData as selected } from '../selected.data';
 import { TodaysDateService as todaysDate } from './todays-date.service';
 import { TodayData as today } from '../today.data';
+import { DaysOfMonth } from '../days-of-month.type';
+import { MonthData, MonthIndex, MonthNumber }
+	from './month-data-calculator_service/month-data.type';
 
 
 export class MonthDisplayService {
+
+	private static __data: {
+		year: number;
+		month: MonthNumber;
+		weeks: DaysOfMonth[];
+		day: number;
+	};
+
+
+	static get data() {
+		return this.__data;
+	}
+
+
+	static set year(value: number) {
+		// update both this.__data.year and this.__data.weeks
+	}
+
+
+	static set month(value: MonthNumber) {
+		// update both this.__data.month and this.__data.weeks
+	}
+
 
 	static init(): void {
 		today.data = todaysDate.get();
@@ -16,17 +41,17 @@ export class MonthDisplayService {
 
 
 	static goForwardOrBackOne(plusOrMinusOne: 1 | -1): void {
-		const {year, monthIndex, days} =
+		const {year, monthIndex, days}: MonthData =
 			monthCalculator.getNextOrPreviousMonthData(plusOrMinusOne);
 
 		selected.year = year;
-		selected.month = monthNames.data[monthIndex];
+		this.__data.month = (monthIndex + 1) as MonthNumber;
 		daysOfMonth.data = days;
 	}
 
 
 	static updateDays(
-		{monthIndex, year}: { monthIndex: number, year: number }
+		{monthIndex, year}: { monthIndex: MonthIndex, year: number }
 	): void {
 		const {days} = monthCalculator.getMonthData(monthIndex, year);
 		daysOfMonth.data = days;
@@ -34,9 +59,9 @@ export class MonthDisplayService {
 
 
 	private static __setSelectedDate({year, monthIndex, day}) {
-		selected.year = year;
-		selected.month = monthNames.data[monthIndex];
-		selected.day = day;
+		this.__data.year = year;
+		this.__data.month = monthIndex + 1;
+		this.__data.day = day;
 	}
 
 }
