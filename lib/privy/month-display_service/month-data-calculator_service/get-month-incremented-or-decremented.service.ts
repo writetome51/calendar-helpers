@@ -1,6 +1,9 @@
+import { MonthIndex } from './month-data.type';
+
+
 export class GetMonthIncrementedOrDecrementedService {
 
-	static go(plusOrMinusOne: 1 | -1, {monthIndex, year}): { monthIndex, year } {
+	static go(plusOrMinusOne: 1 | -1, {monthIndex, year}): { monthIndex: MonthIndex, year } {
 
 		let data = this.__getMonthIndexAndYearPreparedIfEnteringNextOrPreviousYear(
 			plusOrMinusOne, monthIndex, year

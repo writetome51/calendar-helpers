@@ -1,6 +1,5 @@
 import { DaysOfMonthData as daysOfMonth } from '../days-of-month.data';
 import { MonthDataCalculatorService as monthCalculator } from './month-data-calculator_service';
-import { SelectedData as selected } from '../selected.data';
 import { TodaysDateService as todaysDate } from './todays-date.service';
 import { TodayData as today } from '../today.data';
 import { DaysOfMonth } from '../days-of-month.type';
@@ -44,9 +43,9 @@ export class MonthDisplayService {
 		const {year, monthIndex, days}: MonthData =
 			monthCalculator.getNextOrPreviousMonthData(plusOrMinusOne);
 
-		selected.year = year;
+		this.__data.year = year;
 		this.__data.month = (monthIndex + 1) as MonthNumber;
-		daysOfMonth.data = days;
+		daysOfMonth.data = days; // divide 'days' into weeks and assign to this.__data.weeks
 	}
 
 
